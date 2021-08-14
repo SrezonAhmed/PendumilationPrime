@@ -1,0 +1,7 @@
+Date (YYYY/MM/DD) and Time (HH/MM/SS): 2017-11-05 18-14-55, 
+
+Displacement: -0.71, 
+m
+Velocity: 76.92, 
+ms
+Acceleration: 786.36ms^2

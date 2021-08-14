@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="factorPane" prefHeight="391.0" prefWidth="703.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.factorsClass">
+   <children>
+      <AnchorPane layoutX="504.0" prefHeight="433.0" prefWidth="198.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <ImageView fitHeight="116.0" fitWidth="214.0" pickOnBounds="true">
+               <image>
+                  <Image url="@sideMenu.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="closeFButton" buttonType="RAISED" cancelButton="true" contentDisplay="GRAPHIC_ONLY" layoutX="179.0" layoutY="1.0" onAction="#makeFClose" prefHeight="24.0" prefWidth="32.0">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@closeButton.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXTextField alignment="CENTER" editable="false" layoutX="32.0" layoutY="129.0" stylesheets="@material-fx-v0_3.css" text="Graphs">
+               <font>
+                  <Font name="Material Icons" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </JFXTextField>
+            <TextArea editable="false" layoutX="10.0" layoutY="171.0" prefHeight="202.0" prefWidth="194.0" style="-fx-background-color: #FFFFFF;" text="The graphs related to simple harmonic motion (SHM) with regards to the motion of the pendulum. An object is undergoing SHM if the acceleration of the object is directly proportional to its displacement from its equilibrium position &amp; the acceleration is always directed towards the equilibrium position." wrapText="true" />
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="graphButtonD" alignment="CENTER" buttonType="RAISED" layoutX="25.0" layoutY="113.0" onAction="#makeGraphDis" prefHeight="35.0" prefWidth="140.0" style="-fx-background-color: #2196F3;" stylesheets="@material-fx-v0_3.css" text="Displacement Graph" textFill="WHITE">
+         <font>
+            <Font name="Material Icons" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="graphButtonV" alignment="CENTER" buttonType="RAISED" layoutX="25.0" layoutY="206.0" onAction="#makeGraphVel" prefHeight="35.0" prefWidth="140.0" style="-fx-background-color: #2196F3;" stylesheets="@material-fx-v0_3.css" text="Velocity Graph" textFill="WHITE">
+         <font>
+            <Font name="Material Icons" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="graphButtonA" alignment="CENTER" buttonType="RAISED" layoutX="25.0" layoutY="298.0" onAction="#makeGraphAcc" prefHeight="35.0" prefWidth="140.0" style="-fx-background-color: #2196F3;" stylesheets="@material-fx-v0_3.css" text="Acceleration Graph" textFill="WHITE">
+         <font>
+            <Font name="Material Icons" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+      </JFXButton>
+      <Separator layoutX="25.0" layoutY="171.0" prefHeight="12.0" prefWidth="140.0" />
+      <Separator layoutX="25.0" layoutY="267.0" prefHeight="12.0" prefWidth="140.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="85.0" layoutY="26.0" prefHeight="56.0" prefWidth="308.0" text="In any of the animated graphs, left click prompts the ball to move and right click stops the ball." wrapText="true">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Label>
+      <JFXTextArea layoutX="177.0" layoutY="89.0" prefHeight="287.0" prefWidth="300.0" text="The motion of the pendulum:&#10;If we let go from one end then it starts with maximum positive displacement (because it's above the equilibrium). &#10;Zero velocity (it's not moving at the first instant). &#10;Maximum negative acceleration (because it is about to start moving down).&#10;&#10;As it goes through motion:&#10;When velocity is maximum, displacement is zero, and when displacement is maximum, velocity is zero. At maximum displacement the object has to come to rest, and then start moving in the opposite direction. Conversely as the object moves through its equilibrium position, the velocity is only changing very slowly and the acceleration actually becomes zero." wrapText="true" />
+   </children>
+</AnchorPane>

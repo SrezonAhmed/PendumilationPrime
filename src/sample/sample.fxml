@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="paneOne" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="447.0" prefWidth="658.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <children>
+        <AnchorPane layoutX="446.0" prefHeight="447.0" prefWidth="212.0" style="-fx-background-color: #FFFFFF;">
+            <children>
+                <ImageView fitHeight="126.0" fitWidth="212.0" pickOnBounds="true">
+                    <image>
+                        <Image url="@sideMenu.png" />
+                    </image></ImageView>
+                <JFXButton fx:id="graphsButton" buttonType="RAISED" focusTraversable="false" layoutX="45.0" layoutY="262.0" onAction="#makeGraphs" prefHeight="32.0" prefWidth="122.0" style="-fx-background-color: #2196F3;" stylesheets="@material-fx-v0_3.css" text="Graphs" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="Material Design Icons" size="12.0" />
+                    </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <tooltip>
+                  <Tooltip contentDisplay="CENTER" text="Influence the motion of a pendulum by changing the factors">
+                     <font>
+                        <Font name="Material Icons" size="11.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+                </JFXButton>
+                <JFXButton fx:id="equationsButton" buttonType="RAISED" focusTraversable="false" layoutX="45.0" layoutY="201.0" onAction="#makeEquations" prefHeight="32.0" prefWidth="122.0" style="-fx-background-color: #2196F3;" stylesheets="@material-fx-v0_3.css" text="Equations" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="Material Design Icons" size="12.0" />
+                    </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <tooltip>
+                  <Tooltip text="Perform calculations and save them in a file for later use">
+                     <font>
+                        <Font name="Material Icons" size="11.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+                </JFXButton>
+                <JFXButton fx:id="historyButton" buttonType="RAISED" layoutX="45.0" layoutY="321.0" onAction="#makeHistory" prefHeight="32.0" prefWidth="122.0" style="-fx-background-color: #2196F3;" stylesheets="@material-fx-v0_3.css" text="Earlier History" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="Material Design Icons" size="12.0" />
+                    </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <tooltip>
+                  <Tooltip text="View earlier calculations by loading a text file">
+                     <font>
+                        <Font name="Material Icons" size="11.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+                </JFXButton>
+            <Separator layoutX="45.0" layoutY="236.0" prefHeight="26.0" prefWidth="122.0" />
+            <Separator layoutX="45.0" layoutY="295.0" prefHeight="26.0" prefWidth="122.0" />
+            <JFXButton fx:id="closeButton" buttonType="RAISED" cancelButton="true" contentDisplay="GRAPHIC_ONLY" layoutX="177.0" layoutY="1.0" onAction="#makeClose" prefHeight="24.0" prefWidth="32.0">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@closeButton.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            </children>
+            <effect>
+                <DropShadow />
+            </effect>
+        </AnchorPane>
+      <JFXButton fx:id="arButton" contentDisplay="CENTER" focusTraversable="false" layoutX="76.0" layoutY="403.0" onAction="#newArVal" prefHeight="35.0" prefWidth="107.0" style="-fx-background-color: #2196F3;" stylesheets="@material-fx-v0_3.css" text="Air Resistance" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Material Design Icons" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <tooltip>
+            <Tooltip contentDisplay="CENTER" text="Increasing air resistance means slowing down the pendulum, vice-versa it speeds up">
+               <font>
+                  <Font name="Material Icons" size="11.0" />
+               </font>
+            </Tooltip>
+         </tooltip>
+      </JFXButton>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="183.0" layoutY="394.0" prefHeight="26.0" prefWidth="194.0" text="Left Click To Decrease Air Resistance">
+         <font>
+            <Font size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="183.0" layoutY="420.0" prefHeight="26.0" prefWidth="194.0" text="Right Click To Increase Air Resistance">
+         <font>
+            <Font size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </Label>
+      <Separator layoutX="219.0" layoutY="407.0" prefHeight="26.0" prefWidth="122.0" />
+      <Label fx:id="arValLabel" alignment="CENTER" layoutX="387.0" layoutY="403.0" prefHeight="26.0" prefWidth="34.0" />
+    </children>
+</Pane>
