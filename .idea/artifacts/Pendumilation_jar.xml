@@ -2,12 +2,12 @@
   <artifact type="jar" name="Pendumilation:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/Pendumilation_jar</output-path>
     <root id="archive" name="CSIA.jar">
-      <element id="module-output" name="CSIA" />
-      <element id="extracted-dir" path="C:/SceneBuilder/jfoenix.jar" path-in-jar="/" />
+      <element id="module-output" name="PendumilationPrime" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../SceneBuilder/jfoenix.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/../sqlite-jdbc-3.20.0.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$APPLICATION_HOME_DIR$/lib/junit-4.12.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$APPLICATION_HOME_DIR$/lib/hamcrest-core-1.3.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="C:/SceneBuilder/fontawesomefx-8.9.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../SceneBuilder/fontawesomefx-8.9.jar" path-in-jar="/" />
       <element id="library" level="project" name="javadoc" />
       <element id="extracted-dir" path="$USER_HOME$/Downloads/controlsfx-8.40.13.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$USER_HOME$/Downloads/twitter4j-core-3.0.4.jar" path-in-jar="/" />

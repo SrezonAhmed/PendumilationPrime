@@ -9,7 +9,7 @@ public class dbConnection {
             Class.forName("org.sqlite.JDBC");
             Connection connection = null;
             try {
-                connection = DriverManager.getConnection("jdbc:sqlite:C:/Users/mania/IdeaProjects/CSIA/src/sample\\identifier.sqlite");
+                connection = DriverManager.getConnection("jdbc:sqlite:C:/Users/srezo/IdeaProjects/PendumilationPrime/src/sample\\identifier.sqlite");
                 //System.out.println("Connce");
             } catch (SQLException e) {
                 e.printStackTrace();

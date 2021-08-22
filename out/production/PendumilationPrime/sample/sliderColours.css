@@ -1,0 +1,10 @@
+.jfx-slider gravitySlider{
+    -fx-background-color: red;
+}
+.jfx-slider massSlider{
+    -fx-background-color: green;
+}
+.jfx-slider arSlider{
+    -fx-background-color: blue;
+}
+

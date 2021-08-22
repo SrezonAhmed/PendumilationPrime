@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CSIA.iml" filepath="$PROJECT_DIR$/CSIA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PendumilationPrime.iml" filepath="$PROJECT_DIR$/PendumilationPrime.iml" />
     </modules>
   </component>
 </project>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="equationsPane" prefHeight="443.0" prefWidth="860.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.equationsClass">
+   <children>
+      <Pane layoutX="6.0" layoutY="86.0" prefHeight="433.0" prefWidth="703.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Separator layoutX="145.0" layoutY="273.0" prefWidth="200.0" />
+            <Separator layoutX="145.0" layoutY="205.0" prefWidth="200.0" />
+            <Label layoutX="57.0" layoutY="148.0" prefHeight="35.0" prefWidth="70.0" stylesheets="@material-fx-v0_3.css" text="x  = sin(wt)">
+               <font>
+                  <Font name="Material Design Icons" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="46.0" layoutY="220.0" prefHeight="35.0" prefWidth="92.0" stylesheets="@material-fx-v0_3.css" text="v = Awcos(wt)">
+               <font>
+                  <Font name="Material Design Icons" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="39.0" layoutY="286.0" prefHeight="35.0" prefWidth="106.0" stylesheets="@material-fx-v0_3.css" text="a  = -Aw^2 sin(wt)">
+               <font>
+                  <Font name="Material Design Icons" size="12.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="angle" labelFloat="true" layoutX="14.0" layoutY="84.0" prefHeight="25.0" prefWidth="124.0" promptText="Enter the angluar frequency, w" stylesheets="@material-fx-v0_3.css">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <tooltip>
+                  <Tooltip contentDisplay="CENTER" text="Angular frequency is a measure of rotation rate (magnitude of angular velocity)" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Material Icons" size="11.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+            </JFXTextField>
+            <JFXTextField fx:id="time" labelFloat="true" layoutX="452.0" layoutY="84.0" prefHeight="25.0" prefWidth="124.0" promptText="Enter the time, t" stylesheets="@material-fx-v0_3.css">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <tooltip>
+                  <Tooltip text="Time is measured in seconds" />
+               </tooltip>
+            </JFXTextField>
+            <JFXTextField fx:id="amplitude" labelFloat="true" layoutX="253.0" layoutY="84.0" prefHeight="25.0" prefWidth="124.0" promptText="Enter the amplitude, A" stylesheets="@material-fx-v0_3.css">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <tooltip>
+                  <Tooltip text="Maximum displacement of a point from the equilibrium position" />
+               </tooltip>
+            </JFXTextField>
+            <JFXButton fx:id="displacementButton" buttonType="RAISED" layoutX="155.0" layoutY="148.0" onAction="#calculateDisplacement" prefHeight="35.0" prefWidth="179.0" style="-fx-background-color: #2196F3;" stylesheets="@material-fx-v0_3.css" text="Calculate Displacement" textFill="WHITE">
+               <font>
+                  <Font name="Material Icons" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label fx:id="displacementAnswer" alignment="CENTER" contentDisplay="CENTER" layoutX="334.0" layoutY="153.0" prefHeight="25.0" prefWidth="150.0" stylesheets="@material-fx-v0_3.css" text="Displacement Value: 0" textAlignment="CENTER">
+               <font>
+                  <Font name="Material Design Icons" size="12.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="velocityButton" buttonType="RAISED" layoutX="155.0" layoutY="220.0" onAction="#calculateVelocity" prefHeight="35.0" prefWidth="179.0" style="-fx-background-color: #2196F3;" stylesheets="@material-fx-v0_3.css" text="Calculate Velocity" textFill="WHITE">
+               <font>
+                  <Font name="Material Icons" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="accelerationButton" buttonType="RAISED" layoutX="155.0" layoutY="286.0" onAction="#calculateAcceleration" prefHeight="35.0" prefWidth="179.0" style="-fx-background-color: #2196F3;" stylesheets="@material-fx-v0_3.css" text="Calculate Acceleration" textFill="WHITE">
+               <font>
+                  <Font name="Material Icons" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <Label fx:id="velocityAnswer" alignment="CENTER" contentDisplay="CENTER" layoutX="339.0" layoutY="225.0" prefHeight="25.0" prefWidth="140.0" stylesheets="@material-fx-v0_3.css" text="Velocity Value: 0" textAlignment="CENTER">
+               <font>
+                  <Font name="Material Design Icons" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="accelerationAnswer" alignment="CENTER" contentDisplay="CENTER" layoutX="339.0" layoutY="291.0" prefHeight="25.0" prefWidth="150.0" stylesheets="@material-fx-v0_3.css" text="Acceleration Value: 0" textAlignment="CENTER">
+               <font>
+                  <Font name="Material Design Icons" size="12.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="saveButton" buttonType="RAISED" layoutX="210.0" layoutY="356.0" onAction="#saveEquations" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #2196F3;" stylesheets="@material-fx-v0_3.css" text="SAVE" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="Material Icons" size="12.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="Save your calculations in a text file" />
+               </tooltip>
+            </JFXButton>
+            <AnchorPane layoutX="660.0" prefHeight="443.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <ImageView fitHeight="116.0" fitWidth="200.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@sideMenu.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="eCloseButton" buttonType="RAISED" cancelButton="true" contentDisplay="GRAPHIC_ONLY" layoutX="166.0" layoutY="1.0" onAction="#makeEClose" prefHeight="24.0" prefWidth="32.0">
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@closeButton.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXTextField alignment="CENTER" editable="false" layoutX="33.0" layoutY="138.0" stylesheets="@material-fx-v0_3.css" text="Equations">
+                     <font>
+                        <Font name="Material Icons" size="13.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                  </JFXTextField>
+                  <TextArea editable="false" layoutX="14.0" layoutY="192.0" prefHeight="193.0" prefWidth="172.0" style="-fx-background-color: #FFFFFF;" text="Here you can calculate the displacement, velocity and the acceleration by entering in the values above.  You can also save your calculations in a text file to use later, you can load them in the Earlier History section. Note - all values must be entered for any calculation." wrapText="true" />
+               </children>
+            </AnchorPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

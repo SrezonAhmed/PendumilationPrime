@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="historyPane" prefHeight="433.0" prefWidth="703.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.historyClass">
+   <children>
+      <Pane prefHeight="433.0" prefWidth="490.0" style="-fx-background-color: #FFFFFF;">
+         <children>
+            <JFXButton fx:id="historyLoadButton" buttonType="RAISED" layoutX="189.0" layoutY="90.0" onAction="#historyLoad" prefHeight="35.0" prefWidth="138.0" style="-fx-background-color: #2196F3;" stylesheets="@material-fx-v0_3.css" text="Load Calculations" textFill="WHITE">
+               <font>
+                  <Font name="Material Icons" size="12.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="Please choose a text file with your earlier calculations" />
+               </tooltip>
+            </JFXButton>
+            <JFXButton layoutX="120.0" layoutY="332.0" prefHeight="35.0" prefWidth="138.0" style="-fx-background-color: #2196F3;" stylesheets="@material-fx-v0_3.css" text="Share Your Findings" textFill="WHITE">
+               <tooltip>
+                  <Tooltip contentDisplay="CENTER" text="Send a tweet about your results on Twitter!" wrapText="true" />
+               </tooltip></JFXButton>
+            <JFXButton fx:id="shareTwitter" accessibleText="Tweet!" alignment="CENTER" contentDisplay="TOP" layoutX="269.0" layoutY="322.0" onAction="#twitShare" prefHeight="53.0" prefWidth="58.0" text="Tweet!">
+               <graphic>
+                  <ImageView fitHeight="27.0" fitWidth="29.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@if_twitter_circle_color_107170%20(6).png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXTextArea fx:id="textArea" editable="false" layoutX="113.0" layoutY="156.0" prefHeight="122.0" prefWidth="290.0" promptText="Calculations" stylesheets="@material-fx-v0_3.css" wrapText="true">
+               <font>
+                  <Font name="Material Design Icons" size="12.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </JFXTextArea>
+         </children>
+      </Pane>
+      <AnchorPane layoutX="490.0" prefHeight="433.0" prefWidth="213.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <cursor>
+            <Cursor fx:constant="OPEN_HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <ImageView fitHeight="116.0" fitWidth="213.0" pickOnBounds="true" smooth="false" AnchorPane.bottomAnchor="317.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <image>
+                  <Image url="@sideMenu.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="closeHButton" buttonType="RAISED" cancelButton="true" contentDisplay="GRAPHIC_ONLY" layoutX="179.0" layoutY="-1.0" onAction="#makeHClose" prefHeight="24.0" prefWidth="32.0">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@closeButton.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXTextField alignment="CENTER" editable="false" layoutX="29.0" layoutY="143.0" stylesheets="@material-fx-v0_3.css" text="Earlier History">
+               <font>
+                  <Font name="Material Icons" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </JFXTextField>
+            <TextArea editable="false" layoutX="18.0" layoutY="197.0" prefHeight="181.0" prefWidth="172.0" style="-fx-background-color: #FFFFFF;" text="Press the load calculations button to open up a text file with earlier calculations that must have been saved from the equations section. You can share your calculations on Facebook or Twitter." wrapText="true" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

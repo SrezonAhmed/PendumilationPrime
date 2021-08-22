@@ -1,0 +1,4 @@
+Date and Time: 2017-08-12 17-31-35, 
+Displacement: 0.67, 
+Velocity: -142.5, 
+Acceleration: -2058.88
