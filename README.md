@@ -9,5 +9,7 @@ A physics simulation program that shows how wave functions works and how differe
 
 ## Demo
 
+Here's a video of how the program works
+
 [![Demo](https://user-images.githubusercontent.com/24187164/131249253-3295f2a0-c8bc-41be-b4aa-e4d6fcb543f0.jpg)](https://youtu.be/qikaF5yDwfI "Pendumilation")
 
