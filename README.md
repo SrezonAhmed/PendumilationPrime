@@ -2,6 +2,14 @@
 
 This is JavaFX physics simulation program that shows how wave functions works and how different factors affect it, a swinging pendulum is used to show the mathematical changes in the wave function.
 
+## Features
+
+- Database to allow users to register and login (only locally)
+- Simple pendulum simulation
+- Factors to change how the pendulum swings
+- Different wave simulation graphs
+- File saving and loading (saved equations)
+- Sharing results on Twitter using the Twitter API and Twitter4J
 
 ## UML Diagram
 
